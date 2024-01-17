@@ -36,41 +36,35 @@ html {
 	list-style: none;
 	
 }
-.imgslider{
-	width: 20%;
-	height: 00px;
-	max-width: 767px;
-	background-image: url("https://www.hondaindiapower.com/admin/public/uploads/Products/H3EPlnSDw4.jpg");
-	background-size: 100% 100%;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	animation: changeImage 10s linear infinite;
-	place-items: center;
-	align-items: center;
-	margin: 0 auto;
-	
+.imgslider {
+    width: 20%;
+    height: 400px; /* Set your desired height */
+    max-width: 767px;
+    background-size: 100% 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: changeImage 20s linear infinite ;
+    place-items: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
- @media (max-width: 767px) {
-      width: 100%; /* Set to 100% on smaller screens */
-      flex-direction: column; /* Stack items vertically on smaller screens */
-    }
-@keyframes changeImage {
-	0%{
-		background-image: url("https://www.hondaindiapower.com/admin/public/uploads/Products/H3EPlnSDw4.jpg")
-	}
-	25%{
-		background-image: url("https://5.imimg.com/data5/XI/PO/OJ/SELLER-10425879/mobile-van-generator-rental-services-500x500.jpeg")
-	}
-	50%{
-		background-image: url("https://jspower.co.uk/wp-content/uploads/2021/04/5_series-_biodiesel_canopy-BIO-DIESEL-PAGE.jpg")
-	}
-	75%{
-		background-image: url("https://4.imimg.com/data4/GQ/KJ/MY-2176327/standby-generator-500x500.jpg")
-	}
-	100%{
-		background-image: url("https://5.imimg.com/data5/SV/NN/MY-11031492/pem-hydrogen-generator.jpg")
-	}
+@media (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
 }
+
+@keyframes changeImage {
+    0% {
+        background-image: url("https://gawadegreenpower.com/wp-content/uploads/2022/03/Ashok-Leyland-Genset-with-Van-768x458.jpg");
+    }
+    50% {
+        background-image: url("https://jspower.co.uk/wp-content/uploads/2021/04/5_series-_biodiesel_canopy-BIO-DIESEL-PAGE.jpg");
+    }
+    100% {
+        background-image: url("https://5.imimg.com/data5/SV/NN/MY-11031492/pem-hydrogen-generator.jpg");
+    }
+}
+
 
 .navbar {
   background-color: black; /* Change the background color to dark blue */
@@ -227,27 +221,63 @@ section {
   transform: scale(1.1);
 }
 
-#generator-type-display {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  text-align: center;
+
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
 }
 
-#generator-type-display h2 {
-  margin: 0 0 10px;
+a:hover {
+    color: var(--c-brand-light);
 }
 
-#generator-type-display p {
-  margin: 0;
-  color: #888;
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+/* PORTFOLIO */
+.portfolio-item .iconbox {
+    background-color: var(--c-brand);
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+    opacity: 1;
+    top: 50%;
+}
+
 
 
 /* Existing styles remain unchanged */
